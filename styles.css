@@ -202,9 +202,57 @@ footer {
     background-color: #c0392b;
 }
 
+/* for tablet (768px and above)  */
+
+@media screen and (min-width:768px){
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    main {
+        padding:0 2 rem;
+    }
+
+    .expense-item {
+        padding:1.5rem;
+    }
+}
+
+/* desktop (1024px and above)  */
+@media screen and (max-width:1024px) {
+    main {
+        display:grid;
+        grid-template-columns: 1fr 2fr;
+        gap:2rem;
+    }
+
+    #expense-form-section{
+        position: sticky;
+        top:2rem;
+        height: fit-content;
+    }
+}
 
 
-
+/* * Mobile (600px and below) */ 
+@media screen and (max-width: 600px) {
+    .expense-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .expense-description,
+    .expense-amount,
+    .expense-category,
+    .expense-date {
+        width: 100%;
+    }
+    
+    .delete-btn {
+        width: 100%;
+    }
+}
 
 
 
